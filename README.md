@@ -1,8 +1,9 @@
 # Crude (but cryptographic secure) IOTA Wallet Seed Generator
 
-<center>
-    ![example screenshot](https://image.ibb.co/ccGQjv/Bildschirmfoto_20170811175141_2022x943.png)
-</center>
+<p align="center">
+    <img src="https://image.ibb.co/ccGQjv/Bildschirmfoto_20170811175141_2022x943.png" alt="example screenshot" />
+</p>
+
 
 * requirements: go, keybase
 * build with `make all`
