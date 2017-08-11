@@ -5,6 +5,13 @@
 </p>
 
 
+# Download
+
+* [here](https://blog.werise.de/files/iota-seedgen.zip) ([signature](https://blog.werise.de/files/iota-seedgen.zip.asc) - [my keybase profile](https://keybase.io/erdii))
+
+
+# Building
+
 * requirements: go, keybase
 * build with `make all`
 * create a signed release with `make release` (this needs keybase installed)
