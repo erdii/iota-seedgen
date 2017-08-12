@@ -52,5 +52,5 @@ zip: release/iota-seedgen.zip all
 
 release/iota-seedgen.zip:
 	mkdir release
-	zip release/iota-seedgen.zip build/*
+	zip -j release/iota-seedgen.zip build/*
 	keybase pgp sign -d -i release/iota-seedgen.zip -o release/iota-seedgen.zip.asc
