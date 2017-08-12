@@ -1,12 +1,13 @@
+release: clean all zip
+
 .PHONY: all
 all: windows linux mac
-
-release: clean all zip
 
 .PHONY: clean
 clean:
 	rm -rf build/
 	rm -rf release/
+
 
 .PHONY: windows
 windows: win-32 win-64
