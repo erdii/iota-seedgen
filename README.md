@@ -11,6 +11,7 @@ Since there is a shitload of "secure seed generators" out there, that use insecu
 I did not want to create a javascript in-browser seed generator because a hacked webserver can serve you backdoored javascript code that would generate insecure seeds or send the generated seeds back home.
 
 That's why I made a **downloadable** version of a seed generator, that uses cryptographical secure operating system random number sources ([details here](https://golang.org/pkg/crypto/rand/#pkg-variables)) and is reasonably simple to use.
+The best way to generate secure seeds is to download the generator, transfer it to an air-gapped computer and generate the tokens there.
 
 # Download (Windows, Mac, Linux)
 
