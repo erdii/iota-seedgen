@@ -6,9 +6,10 @@ import (
 	"testing"
 )
 
-func TestIntDistribution(*testing.T) {
+func TestIntDistribution(t *testing.T) {
+	const targetCount = 10000000
 	counts := make(map[int64]int64)
-	ints, err := generateRandomInts(10000000)
+	ints, err := generateRandomInts(targetCount)
 
 	if err != nil {
 		fmt.Println(err)
@@ -19,15 +20,26 @@ func TestIntDistribution(*testing.T) {
 		counts[x]++
 	}
 
+	sum := int64(0)
+
 	for i := 0; i <= 26; i++ {
-		fmt.Printf("%02d: %d\n", i, counts[int64(i)])
+		count := counts[int64(i)]
+		sum += count
+		fmt.Printf("%02d: %d\n", i, count)
+	}
+
+	fmt.Printf("Sum: %d\n", sum)
+
+	if sum != targetCount {
+		t.Fatal(fmt.Sprintf("sum (%d) != targetCount(%d)", sum, targetCount))
 	}
 }
 
-func TestCharacterDistribution(*testing.T) {
+func TestCharacterDistribution(t *testing.T) {
+	const targetCount = 10000000
 	const letters = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	counts := make(map[byte]int64)
-	ints, err := generateRandomInts(10000000)
+	ints, err := generateRandomInts(targetCount)
 
 	if err != nil {
 		fmt.Println(err)
@@ -39,8 +51,17 @@ func TestCharacterDistribution(*testing.T) {
 		counts[char]++
 	}
 
+	sum := int64(0)
+
 	for i := 0; i <= 26; i++ {
 		count := counts[letters[i]]
+		sum += count
 		fmt.Printf("%s: %d\n", string(letters[i]), count)
+	}
+
+	fmt.Printf("Sum: %d\n", sum)
+
+	if sum != targetCount {
+		t.Fatal(fmt.Sprintf("sum (%d) != targetCount(%d)", sum, targetCount))
 	}
 }
