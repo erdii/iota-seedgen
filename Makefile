@@ -1,3 +1,6 @@
+VERSION := $(shell cat VERSION.txt)
+LDFLAGS := -ldflags="-X main.version=$(VERSION)"
+
 release: clean all zip
 
 .PHONY: all
@@ -16,10 +19,10 @@ win-32: build/iota-seedgen_win-32bit.exe
 win-64: build/iota-seedgen_win-64bit.exe
 
 build/iota-seedgen_win-32bit.exe: main.go
-	GOOS=windows GOARCH=386 go build -o build/iota-seedgen_win-32bit.exe main.go
+	GOOS=windows GOARCH=386 go build -o build/iota-seedgen_win-32bit.exe $(LDFLAGS) main.go
 
 build/iota-seedgen_win-64bit.exe: main.go
-	GOOS=windows GOARCH=amd64 go build -o build/iota-seedgen_win-64bit.exe main.go
+	GOOS=windows GOARCH=amd64 go build -o build/iota-seedgen_win-64bit.exe $(LDFLAGS) main.go
 
 
 .PHONY: linux
@@ -29,10 +32,10 @@ linux-32: build/iota-seedgen_linux-32bit
 linux-64: build/iota-seedgen_linux-64bit
 
 build/iota-seedgen_linux-32bit: main.go
-	GOOS=linux GOARCH=386 go build -o build/iota-seedgen_linux-32bit main.go
+	GOOS=linux GOARCH=386 go build -o build/iota-seedgen_linux-32bit $(LDFLAGS) main.go
 
 build/iota-seedgen_linux-64bit: main.go
-	GOOS=linux GOARCH=amd64 go build -o build/iota-seedgen_linux-64bit main.go
+	GOOS=linux GOARCH=amd64 go build -o build/iota-seedgen_linux-64bit $(LDFLAGS) main.go
 
 
 .PHONY: mac
@@ -42,10 +45,10 @@ darwin-32: build/iota-seedgen_mac-32bit
 darwin-64: build/iota-seedgen_mac-64bit
 
 build/iota-seedgen_mac-32bit: main.go
-	GOOS=darwin GOARCH=386 go build -o build/iota-seedgen_mac-32bit main.go
+	GOOS=darwin GOARCH=386 go build -o build/iota-seedgen_mac-32bit $(LDFLAGS) main.go
 
 build/iota-seedgen_mac-64bit: main.go
-	GOOS=darwin GOARCH=amd64 go build -o build/iota-seedgen_mac-64bit main.go
+	GOOS=darwin GOARCH=amd64 go build -o build/iota-seedgen_mac-64bit $(LDFLAGS) main.go
 
 
 .PHONY: zip
@@ -53,5 +56,5 @@ zip: release/iota-seedgen.zip all
 
 release/iota-seedgen.zip:
 	mkdir release
-	zip -j release/iota-seedgen.zip build/*
-	keybase pgp sign -d -i release/iota-seedgen.zip -o release/iota-seedgen.zip.asc
+	zip -j release/iota-seedgen_v$(VERSION).zip build/*
+	keybase pgp sign -d -i release/iota-seedgen_v$(VERSION).zip -o release/iota-seedgen_v$(VERSION).zip.asc

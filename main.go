@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+var version = "undefined"
+
 const letters = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func generateRandomInts(n int) ([]int64, error) {
@@ -46,7 +48,7 @@ func generateRandomSeed() (string, error) {
 }
 
 func main() {
-	fmt.Println("Welcome to iota-seedgen - your friendly IOTA wallet seed generator!")
+	fmt.Printf("Welcome to iota-seedgen v%s - your friendly IOTA wallet seed generator!\n", version)
 	fmt.Println("------------------")
 
 	// generate 10 wallet seeds
