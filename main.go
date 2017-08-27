@@ -3,33 +3,41 @@ package main
 import (
 	"crypto/rand"
 	"fmt"
+	"math/big"
 	"os"
 )
 
-func generateRandomBytes(n int) ([]byte, error) {
-	b := make([]byte, n)
-	_, err := rand.Read(b)
+func generateRandomInts(n int) ([]int64, error) {
+	ints := make([]int64, n)
 
-	if err != nil {
-		return nil, err
+	for i := range ints {
+		randomInt, err := rand.Int(rand.Reader, big.NewInt(27))
+
+		if err != nil {
+			return nil, err
+		}
+
+		ints[i] = randomInt.Int64()
 	}
 
-	return b, nil
+	return ints, nil
 }
 
 func generateRandomSeed() (string, error) {
 	const letters = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	bytes, err := generateRandomBytes(81)
+	ints, err := generateRandomInts(81)
 
 	if err != nil {
 		return "", err
 	}
 
-	for i, b := range bytes {
-		bytes[i] = letters[b%byte(len(letters))]
+	token := make([]byte, 81)
+
+	for i, x := range ints {
+		token[i] = byte(letters[x])
 	}
 
-	return string(bytes), nil
+	return string(token), nil
 }
 
 func main() {
