@@ -39,10 +39,10 @@ Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/
 
 ### Checksums for `https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.0.2.zip`
 
-* md5: `cd0367666a2b6b221b4bbe741aa2bff1`
-* sha1: `cd2ae82bb62a0078c3723f68c615514b51506f32`
-* sha256: `ff6b5b91526686295edaa62f168b951b7962fcfb5e07ad9fd656b97f3e634f1c`
-* sha512: `ba2ed19c006b38415fa8c887b0776c87e87b5ef40a362506f366b078b84ffbc7ac6556d40b9cda3b790ecd43ca064a6e26a07317fa1a4994f42dbe56b3fdbf06`
+* md5: `b0cacd4bcff47ae415ed971678316889`
+* sha1: `b406c385716d151f5e5dc9b345ad70e01d7b7c42`
+* sha256: `9e028a052ab610f5992f10efe8649ca1f54b3bedd072adf7fa742f6a01640d16`
+* sha512: `19a822210d23de23f5a466d06200b7cbd8c749222bced6da07b9d6ca2f909750104888407e32f419aaeeed234934da2603372b8731eaac71d99de1ac0fb359a0`
 
 
 # Building it yourself (advanced users)
