@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+const letters = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 func generateRandomInts(n int) ([]int64, error) {
 	ints := make([]int64, n)
 
@@ -23,8 +25,11 @@ func generateRandomInts(n int) ([]int64, error) {
 	return ints, nil
 }
 
+func intToCharByte(i int64) byte {
+	return byte(letters[i])
+}
+
 func generateRandomSeed() (string, error) {
-	const letters = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	ints, err := generateRandomInts(81)
 
 	if err != nil {
@@ -34,7 +39,7 @@ func generateRandomSeed() (string, error) {
 	token := make([]byte, 81)
 
 	for i, x := range ints {
-		token[i] = byte(letters[x])
+		token[i] = intToCharByte(x)
 	}
 
 	return string(token), nil

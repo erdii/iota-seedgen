@@ -37,7 +37,6 @@ func TestIntDistribution(t *testing.T) {
 
 func TestCharacterDistribution(t *testing.T) {
 	const targetCount = 10000000
-	const letters = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	counts := make(map[byte]int64)
 	ints, err := generateRandomInts(targetCount)
 
@@ -47,16 +46,17 @@ func TestCharacterDistribution(t *testing.T) {
 	}
 
 	for _, x := range ints {
-		char := letters[x]
+		char := intToCharByte(x)
 		counts[char]++
 	}
 
 	sum := int64(0)
 
-	for i := 0; i <= 26; i++ {
-		count := counts[letters[i]]
+	for i := int64(0); i <= 26; i++ {
+		char := intToCharByte(i)
+		count := counts[char]
 		sum += count
-		fmt.Printf("%s: %d\n", string(letters[i]), count)
+		fmt.Printf("%s: %d\n", string(char), count)
 	}
 
 	fmt.Printf("Sum: %d\n", sum)
