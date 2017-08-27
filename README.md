@@ -4,6 +4,11 @@
     <img src="https://image.ibb.co/ccGQjv/Bildschirmfoto_20170811175141_2022x943.png" alt="example screenshot" />
 </p>
 
+# CAUTION
+
+**!!!READ THIS!!!** Thanks to the amazing people in the iota slack - I discovered that the seed generator was biased towards some characters!!!
+That means that the generated seeds were not as secure as they could be. You should download the new version of iota-seedgen and move your balance from the old seed to a new generated one!
+
 # About
 
 Since there is a shitload of "secure seed generators" out there, that use insecure random number generators like `Math.random()` in javascript or `Get-Random` in powershell I wanted to write a **SECURE** seed generator. [This guy's](https://www.reddit.com/r/Iota/comments/6vh8mv/urgent_all_of_my_iota_was_stolen_today_and_here/) iota have been stolen because he generated the seed in an insecure way.
@@ -15,8 +20,8 @@ The best way to generate secure seeds is to download the generator, transfer it 
 
 # Download (Windows, Mac, Linux)
 
-If you **TRUST ME** and just want to get the seed real fast download the programm [here](https://blog.werise.de/files/iota-seedgen.zip) ([signature](https://blog.werise.de/files/iota-seedgen.zip.asc) - [my keybase profile](https://keybase.io/erdii)).
-Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/gph/en/manual/x135.html#AEN160) or [how to verify a pgp signature written by torproject.org](https://www.torproject.org/docs/verifying-signatures.html.en#maincol) to verify the signature.
+If you **TRUST ME** and just want to get the seed real fast download the programm [here](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.0.2.zip) ([signature](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.0.2.zip.asc) - [my keybase profile](https://keybase.io/erdii)).
+Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/gph/en/manual/x135.html#AEN160) or [how to verify a pgp signature written by torproject.org](https://www.torproject.org/docs/verifying-signatures.html.en#maincol) to verify the signature. my key id is **6682993C**
 
 
 # Usage
@@ -32,7 +37,7 @@ Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/
   * linux 64bit: `./iota-seedgen_linux-64bit`
   * linux 32bit: `./iota-seedgen_linux-32bit`
 
-### Checksums for `https://blog.werise.de/files/iota-seedgen.zip`
+### Checksums for `https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.0.2.zip`
 
 * md5: `cd0367666a2b6b221b4bbe741aa2bff1`
 * sha1: `cd2ae82bb62a0078c3723f68c615514b51506f32`
