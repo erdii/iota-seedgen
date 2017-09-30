@@ -1,10 +1,12 @@
 VERSION := $(shell cat VERSION.txt)
 LDFLAGS := -ldflags="-X main.version=$(VERSION)"
 
-release: clean all zip
+release: | clean all zip checksums
+
 
 .PHONY: all
 all: windows linux mac
+
 
 .PHONY: clean
 clean:
@@ -52,13 +54,22 @@ build/iota-seedgen_mac-64bit: main.go
 
 
 .PHONY: zip
-zip: release/iota-seedgen.zip all
+zip: | all release/iota-seedgen.zip 
 
 release/iota-seedgen.zip:
-	mkdir release
+	mkdir release || true
 	zip -j release/iota-seedgen_v$(VERSION).zip build/*
 	keybase pgp sign -d -i release/iota-seedgen_v$(VERSION).zip -o release/iota-seedgen_v$(VERSION).zip.asc
 
+
+MD5 = $(shell md5sum release/iota-seedgen_v$(VERSION).zip | cut -d ' ' -f 1)
+SHA1 = $(shell sha1sum release/iota-seedgen_v$(VERSION).zip | cut -d ' ' -f 1)
+SHA256 = $(shell sha256sum release/iota-seedgen_v$(VERSION).zip | cut -d ' ' -f 1)
+SHA512 = $(shell sha512sum release/iota-seedgen_v$(VERSION).zip | cut -d ' ' -f 1)
+
+.PHONY: checksums
+checksums:
+	echo "\nrelease checksum: for release/iota-seedgen_v$(VERSION).zip\nMD5: $(MD5)\nSHA1: $(SHA1)\nSHA256: $(SHA256)\nSHA512: $(SHA512)"
 
 .PHONY: test
 test:
