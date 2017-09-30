@@ -58,3 +58,8 @@ release/iota-seedgen.zip:
 	mkdir release
 	zip -j release/iota-seedgen_v$(VERSION).zip build/*
 	keybase pgp sign -d -i release/iota-seedgen_v$(VERSION).zip -o release/iota-seedgen_v$(VERSION).zip.asc
+
+
+.PHONY: test
+test:
+	go test
