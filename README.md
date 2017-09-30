@@ -20,8 +20,11 @@ The best way to generate secure seeds is to download the generator, transfer it 
 
 # Download (Windows, Mac, Linux)
 
-If you **TRUST ME** and just want to get the seed real fast download the programm [on github](https://github.com/erdii/iota-seedgen/releases/latest)
-or [on my server](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.1.0.zip) ([signature](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.1.0.zip.asc) - [my keybase profile](https://keybase.io/erdii)).
+If you **TRUST ME** and just want to get the seed real fast download the programm
+* [from github](https://github.com/erdii/iota-seedgen/releases/latest)
+* [from my server](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.1.0.zip)
+* ([signature](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.1.0.zip.asc) - [my keybase profile](https://keybase.io/erdii))
+
 Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/gph/en/manual/x135.html#AEN160) or [how to verify a pgp signature written by torproject.org](https://www.torproject.org/docs/verifying-signatures.html.en#maincol) to verify the signature. my key id is **6682993C**
 
 
