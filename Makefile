@@ -59,7 +59,9 @@ zip: | all release/iota-seedgen.zip
 release/iota-seedgen.zip:
 	mkdir release || true
 	zip -j release/iota-seedgen_v$(VERSION).zip build/*
+	cp release/iota-seedgen_v$(VERSION).zip release/iota-seedgen_latest.zip
 	keybase pgp sign -d -i release/iota-seedgen_v$(VERSION).zip -o release/iota-seedgen_v$(VERSION).zip.asc
+	cp release/iota-seedgen_v$(VERSION).zip.asc release/iota-seedgen_latest.zip.asc
 
 
 MD5 = $(shell md5sum release/iota-seedgen_v$(VERSION).zip | cut -d ' ' -f 1)
