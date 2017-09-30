@@ -43,10 +43,10 @@ Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/
 
 ### Checksums
 * `iota-seedgen_v0.1.0.zip`
-    * md5: `1d2371c0a2609e17f0661de3a0b55ef2`
-    * sha1: `36b119f1cce0133dbd802f1f74bb23af5b92e5ff`
-    * sha256: `e846e638e8b6b97a3c377bd3a57fdb3318b2f67e2460fbfac3a8fe0f241c9438`
-    * sha512: `e9565f86a176102ec074962a658d6f01f23236ae39343a9fb9deb798976c375345e20b2199866eb6be8e1da30f1b45ffda9fb8b521d54eae51c4104e705ca37e`
+    * md5: `ccc1ef56dfc1925a12a689de8421c51f`
+    * sha1: `8983d3d991f6394b3846f54f8b2fa7bb8e2699c9`
+    * sha256: `168d0db874d18e2dace0dbabdf6974be90a9cd88b65618795518c412e51f3e7b`
+    * sha512: `f41b473fd38d44b10f847d4a89713bd2bce86ff74622efd133aaca38744eb0f8f4858fdf5a63f1e2a627ec7da874226799bcaa83bca37a911db2d7779156791a`
 * `iota-seedgen_v0.0.2.zip`
     * md5: `b0cacd4bcff47ae415ed971678316889`
     * sha1: `b406c385716d151f5e5dc9b345ad70e01d7b7c42`
