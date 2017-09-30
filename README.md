@@ -20,7 +20,8 @@ The best way to generate secure seeds is to download the generator, transfer it 
 
 # Download (Windows, Mac, Linux)
 
-If you **TRUST ME** and just want to get the seed real fast download the programm [here](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.0.2.zip) ([signature](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.0.2.zip.asc) - [my keybase profile](https://keybase.io/erdii)).
+If you **TRUST ME** and just want to get the seed real fast download the programm [on github](https://github.com/erdii/iota-seedgen/releases/latest)
+or [on my server](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.1.0.zip) ([signature](https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.1.0.zip.asc) - [my keybase profile](https://keybase.io/erdii)).
 Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/gph/en/manual/x135.html#AEN160) or [how to verify a pgp signature written by torproject.org](https://www.torproject.org/docs/verifying-signatures.html.en#maincol) to verify the signature. my key id is **6682993C**
 
 
@@ -37,13 +38,17 @@ Read [how to verify a pgp signature written by gnupg.org](https://www.gnupg.org/
   * linux 64bit: `./iota-seedgen_linux-64bit`
   * linux 32bit: `./iota-seedgen_linux-32bit`
 
-### Checksums for `https://blog.werise.de/files/iota-seedgen/iota-seedgen_v0.0.2.zip`
-
-* md5: `b0cacd4bcff47ae415ed971678316889`
-* sha1: `b406c385716d151f5e5dc9b345ad70e01d7b7c42`
-* sha256: `9e028a052ab610f5992f10efe8649ca1f54b3bedd072adf7fa742f6a01640d16`
-* sha512: `19a822210d23de23f5a466d06200b7cbd8c749222bced6da07b9d6ca2f909750104888407e32f419aaeeed234934da2603372b8731eaac71d99de1ac0fb359a0`
-
+### Checksums
+* `iota-seedgen_v0.1.0.zip`
+    * md5: `1d2371c0a2609e17f0661de3a0b55ef2`
+    * sha1: `36b119f1cce0133dbd802f1f74bb23af5b92e5ff`
+    * sha256: `e846e638e8b6b97a3c377bd3a57fdb3318b2f67e2460fbfac3a8fe0f241c9438`
+    * sha512: `e9565f86a176102ec074962a658d6f01f23236ae39343a9fb9deb798976c375345e20b2199866eb6be8e1da30f1b45ffda9fb8b521d54eae51c4104e705ca37e`
+* `iota-seedgen_v0.0.2.zip`
+    * md5: `b0cacd4bcff47ae415ed971678316889`
+    * sha1: `b406c385716d151f5e5dc9b345ad70e01d7b7c42`
+    * sha256: `9e028a052ab610f5992f10efe8649ca1f54b3bedd072adf7fa742f6a01640d16`
+    * sha512: `19a822210d23de23f5a466d06200b7cbd8c749222bced6da07b9d6ca2f909750104888407e32f419aaeeed234934da2603372b8731eaac71d99de1ac0fb359a0`
 
 # Building it yourself (advanced users)
 
